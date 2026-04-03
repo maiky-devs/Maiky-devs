@@ -30,7 +30,7 @@ export default function Navbar() {
           <span className="text-[#6c6dff]">.</span>
         </span>
 
-        {/* Desktop links */}
+        {/* Links */}
         <ul className="hidden md:flex gap-8 list-none">
           {LINKS.map(l => (
             <li key={l.href}>
@@ -42,14 +42,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
         <a href="#contact"
           className="hidden md:inline-flex items-center gap-2 bg-[#6c6dff] hover:bg-[#a78bfa]
             text-white text-sm font-medium px-5 py-2 rounded-full transition-all hover:-translate-y-0.5 no-underline">
           Hablemos
         </a>
 
-        {/* Burger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-0 cursor-pointer">

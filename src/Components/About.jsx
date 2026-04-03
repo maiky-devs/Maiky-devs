@@ -28,7 +28,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-          // Skills
+          {/* Skills */}
           <div>
             <p className="text-[#888899] leading-relaxed mb-4">
               Soy <span className="text-white font-medium">Miguel López</span>, Ingeniero en
@@ -60,7 +60,8 @@ export default function About() {
             </div>
           </div>
           
-          // Tarjeta de informacion 
+          
+          {/* Tarjeta de informacion */}
           <div className="bg-[#1c1c28] border border-white/5 rounded-2xl p-6">
             <p className="font-display font-bold text-base mb-5">Info rápida</p>
             {INFO.map((item, i) => (

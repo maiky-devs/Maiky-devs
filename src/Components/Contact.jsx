@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 const LINKS = [
   { icon: '✉️', label: 'Email',    value: 'lopezjavmiguel@gmail.com', href: 'mailto:lopezjavmiguel@gmail.com' },
@@ -7,14 +6,6 @@ const LINKS = [
 ]
 
 export default function Contact() {
-  const [form, setForm]   = useState({ name: '', email: '', message: '' })
-  const [sent, setSent]   = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Conecta con Formspree o EmailJS aquí
-    setSent(true)
-  }
 
   return (
     <section id="contact" className="py-24 px-6 md:px-12">
@@ -33,7 +24,7 @@ export default function Contact() {
           {/* Links */}
           <div>
             <p className="text-[#888899] leading-relaxed mb-8">
-              Si tienes una idea para una app móvil, necesitas apoyo en tecnología o quieres
+              Si tienes una idea para una app móvil, necesitas apoyo con tu pagina web o quieres
               colaborar, escríbeme. Siempre estoy abierto a buenas conversaciones.
             </p>
             <div className="flex flex-col gap-3">
@@ -60,60 +51,6 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Form */}
-          <div className="bg-[#1c1c28] border border-white/5 rounded-2xl p-6">
-            {sent ? (
-              <div className="text-center py-10">
-                <div className="text-5xl mb-4">🚀</div>
-                <p className="font-display font-bold text-lg mb-2">¡Mensaje enviado!</p>
-                <p className="text-[#888899] text-sm">Te respondo a la brevedad.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                {[
-                  { id: 'name',    label: 'Tu nombre', type: 'text',  placeholder: 'Juan Pérez' },
-                  { id: 'email',   label: 'Email',     type: 'email', placeholder: 'juan@empresa.com' },
-                ].map(f => (
-                  <div key={f.id}>
-                    <label className="block text-[0.65rem] uppercase tracking-widest text-[#888899] mb-2">
-                      {f.label}
-                    </label>
-                    <input
-                      type={f.type} required placeholder={f.placeholder}
-                      value={form[f.id]}
-                      onChange={e => setForm({ ...form, [f.id]: e.target.value })}
-                      className="w-full bg-[#0a0a0f] border border-white/10 focus:border-[#6c6dff]
-                        rounded-xl px-4 py-3 text-sm text-white placeholder-[#888899]
-                        outline-none transition-colors"
-                    />
-                  </div>
-                ))}
-                <div>
-                  <label className="block text-[0.65rem] uppercase tracking-widest text-[#888899] mb-2">
-                    Mensaje
-                  </label>
-                  <textarea
-                    required rows={5} placeholder="Cuéntame de tu proyecto..."
-                    value={form.message}
-                    onChange={e => setForm({ ...form, message: e.target.value })}
-                    className="w-full bg-[#0a0a0f] border border-white/10 focus:border-[#6c6dff]
-                      rounded-xl px-4 py-3 text-sm text-white placeholder-[#888899]
-                      outline-none transition-colors resize-none"
-                  />
-                </div>
-                <button type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[#6c6dff]
-                    hover:bg-[#a78bfa] text-white font-medium py-3 rounded-xl
-                    transition-all hover:-translate-y-0.5 text-sm mt-1 border-0 cursor-pointer">
-                  Enviar mensaje
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </form>
-            )}
           </div>
 
         </div>

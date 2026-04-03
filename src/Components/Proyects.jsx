@@ -1,28 +1,28 @@
 const PROJECTS = [
   {
     emoji: '🏋️',
-    gradient: 'linear-gradient(135deg, #0f1923 0%, #1a2f4a 100%)',
+    gradient: 'linear-gradient(135deg, #0f0a1f 0%, #2a1f4a 100%)',
     name: 'Wellf',
     tags: [
       { label: 'Mobile App',    cls: 'bg-[#6c6dff]/15 text-[#a78bfa]' },
       { label: 'Independiente', cls: 'bg-[#4ade80]/10 text-[#4ade80]' },
     ],
-    desc: 'App de gestión de clases para un gimnasio local. Los miembros pueden reservar clases y el staff administra el calendario de actividades.',
+    desc: 'App de gestión de clases para un gimnasio local. Los miembros pueden reservar clases y el staff administra las actividades.',
   },
   {
     emoji: '🛡️',
-    gradient: 'linear-gradient(135deg, #0f1520 0%, #1a1f3a 100%)',
+    gradient: 'linear-gradient(135deg, #1a0f0a 0%, #ff7a18 100%)',
     name: 'ICOM Safety',
     tags: [
       { label: 'Mobile App',   cls: 'bg-[#fbbf24]/10 text-[#fbbf24]' },
       { label: 'Colaboración', cls: 'bg-[#4ade80]/10 text-[#4ade80]' },
     ],
-    desc: 'Aplicación empresarial desarrollada en colaboración. Solución orientada a la seguridad para operaciones internas de ICOM.',
+    desc: 'Aplicación empresarial desarrollada en colaboración. Solución orientada a ICOM.',
   },
   {
     emoji: '📊',
-    gradient: 'linear-gradient(135deg, #1a1208 0%, #2e200a 100%)',
-    name: 'ICOM Reporter',
+    gradient: 'linear-gradient(135deg, #0f0f12 0%, #2a2a30 100%)',
+    name: 'ICOM Reporteador',
     tags: [
       { label: 'Mobile App',   cls: 'bg-[#fbbf24]/10 text-[#fbbf24]' },
       { label: 'Colaboración', cls: 'bg-[#4ade80]/10 text-[#4ade80]' },
