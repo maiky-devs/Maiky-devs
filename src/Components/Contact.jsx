@@ -1,7 +1,6 @@
 
 const LINKS = [
   { icon: '✉️', label: 'Email',    value: 'lopezjavmiguel@gmail.com', href: 'mailto:lopezjavmiguel@gmail.com' },
-  { icon: '📱', label: 'Celular',  value: '662-404-4160',             href: 'tel:6624044160' },
   { icon: '💼', label: 'LinkedIn', value: 'Miguel Lopez',       href: 'https://www.linkedin.com/in/miguel-lopez-505422264/' },
 ]
 
